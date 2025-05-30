@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kedai Jajanan Firla</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet" />
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .fade-in {
+            animation: fadeIn 1.2s ease-in-out both;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        .animate-float {
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .glow:hover {
+            box-shadow: 0 0 15px rgba(255, 136, 0, 0.6);
+            transform: translateY(-4px);
+            transition: all 0.3s ease-in-out;
+        }
+    </style>
+</head>
+
+<body class="bg-gradient-to-b from-orange-50 via-yellow-50 to-white text-gray-800 min-h-screen flex flex-col">
+
+    <!-- Header -->
+    <header class="bg-white/80 backdrop-blur-md shadow-md sticky top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center py-4 px-6">
+            <h1 class="text-2xl font-extrabold text-orange-600 tracking-wider">Kedai Firla</h1>
+            <button id="menu-toggle" class="md:hidden text-orange-600 focus:outline-none text-2xl">&#9776;</button>
+            <nav id="menu" class="hidden md:flex space-x-6 text-sm font-medium">
+                <a href="index.html" class="hover:text-orange-600">Beranda</a>
+                <a href="semua.html" class="hover:text-orange-600">Daftar Makanan</a>
+                <a href="pesan.html" class="hover:text-orange-600">Order</a>
+                <a href="contact.html" class="hover:text-orange-600">FAQs</a>
+            </nav>
+        </div>
+        <div id="mobile-menu" class="md:hidden hidden px-6 pb-4">
+            <a href="index.html" class="block py-2 hover:text-orange-600">Beranda</a>
+            <a href="semua.html" class="block py-2 hover:text-orange-600">Daftar Makanan</a>
+            <a href="pesan.html" class="block py-2 hover:text-orange-600">Order</a>
+            <a href="contact.html" class="block py-2 hover:text-orange-600">FAQs</a>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="min-h-screen flex items-center bg-gradient-to-br from-yellow-100 to-orange-200 fade-in">
+        <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 items-center gap-12">
+            <div>
+                <h1 class="text-5xl sm:text-6xl md:text-7xl font-extrabold text-orange-700 mb-6 drop-shadow-sm">
+                    Selamat Datang di Kedai Firla
+                </h1>
+                <p class="text-xl md:text-2xl text-gray-700 mb-10">
+                    Jajanan rumahan yang bikin kangen—manis, gurih, dan selalu fresh!
+                </p>
+                <a href="pesan.html"
+                    class="bg-orange-500 hover:bg-orange-600 text-white px-10 py-4 rounded-full text-xl shadow-md transition-all duration-300">
+                    🍡 Pesan Sekarang
+                </a>
+            </div>
+            <div class="flex justify-center">
+                <img src="market.png" alt="Produk Unggulan"
+                    class="w-72 sm:w-96 md:w-[30rem] h-auto object-cover animate-float" />
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Favorit -->
+    <section id="menu" class="py-16 px-6 max-w-6xl mx-auto fade-in" data-aos="fade-up">
+        <h3 class="text-3xl font-bold text-orange-700 mb-12 text-center">Menu Favorit Kami</h3>
+        <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-10">
+            <template id="menu-template">
+                <div class="bg-white rounded-xl overflow-hidden transform transition hover:scale-105 glow shadow-lg flex flex-col"
+                    data-aos="zoom-in-up">
+                    <img src="gambar.jpg" alt="Nama Menu" class="w-full h-48 object-cover" />
+                    <div class="p-5 flex-grow flex flex-col">
+                        <h4 class="font-bold text-xl text-orange-600 mb-1">Nama Menu</h4>
+                        <p class="text-sm text-gray-500 mb-2">Rp 0</p>
+                        <p class="text-gray-600 text-sm mb-4">Deskripsi menu yang singkat dan menggoda.</p>
+                        <a href="#"
+                            class="inline-block mt-auto bg-orange-500 text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-orange-600 transition shadow glow">Lihat
+                            Detail</a>
+                    </div>
+                </div>
+            </template>
+        </div>
+        <script>
+            const menu = [
+                { src: 'risol.jpg', title: 'Risol Mayo', desc: 'Gurih, lembut, creamy di setiap gigitan.', link: 'detail-risol.html', price: 'Rp 5.000' },
+                { src: 'otak.jpeg', title: 'Otak-Otak', desc: 'Cocok buat camilan sore.', link: 'detail-otak.html', price: 'Rp 4.500' },
+                { src: 'donat.jpeg', title: 'Donat Mini', desc: 'Manis, empuk, dan lucu.', link: 'detail-donat.html', price: 'Rp 3.500' },
+                { src: 'pastel.jpg', title: 'Pastel Isi', desc: 'Isi padat, renyah di luar.', link: 'detail-pastel.html', price: 'Rp 5.000' },
+                { src: 'cireng.jpg', title: 'Cireng Isi', desc: 'Kriuk di luar, kenyal di dalam.', link: 'detail-cireng.html', price: 'Rp 4.000' },
+                { src: 'pisangg.jpg', title: 'Pisang Coklat', desc: 'Manis legit diselimuti coklat.', link: 'detail-pisang.html', price: 'Rp 4.500' }
+            ];
+
+            const container = document.querySelector('#menu .grid');
+            const template = document.getElementById('menu-template');
+
+            menu.forEach(item => {
+                const clone = template.content.cloneNode(true);
+                clone.querySelector('img').src = item.src;
+                clone.querySelector('img').alt = item.title;
+                clone.querySelector('h4').textContent = item.title;
+                clone.querySelector('p.text-gray-500').textContent = item.price;
+                clone.querySelector('p.text-gray-600').textContent = item.desc;
+                clone.querySelector('a').href = item.link;
+                container.appendChild(clone);
+            });
+        </script>
+    </section>
+
+    <!-- All Item -->
+    <section class="bg-white py-12 text-center" data-aos="fade-up">
+        <div class="max-w-6xl mx-auto px-6">
+            <h3 class="text-2xl font-bold text-orange-600 mb-4">Lihat Semua Jajanan</h3>
+            <p class="text-gray-600 mb-6">Lengkap dan selalu fresh setiap harinya</p>
+            <a href="semua.html"
+                class="inline-block bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded-full transition shadow-md glow">🍽️
+                Lihat Semua Item</a>
+        </div>
+    </section>
+
+    <!-- Testimoni -->
+    <section class="bg-orange-50 py-16 px-6 fade-in" data-aos="fade-up">
+        <div class="max-w-6xl mx-auto text-center">
+            <h3 class="text-3xl font-bold text-orange-700 mb-10">Kata Mereka Tentang Kedai Firla</h3>
+            <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
+                <div class="bg-white p-6 rounded-2xl shadow-lg transition transform hover:scale-105"
+                    data-aos="flip-left">
+                    <p class="text-gray-700 mb-4 italic">"Risolnya enak banget, lembut dan mayonya mantap!"</p>
+                    <div class="text-yellow-400 text-xl mb-2">★★★★★</div>
+                    <p class="text-sm text-gray-500">— Dina, Mahasiswa</p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-lg transition transform hover:scale-105"
+                    data-aos="flip-left" data-aos-delay="100">
+                    <p class="text-gray-700 mb-4 italic">"Donatnya empuk, cocok buat oleh-oleh!"</p>
+                    <div class="text-yellow-400 text-xl mb-2">★★★★☆</div>
+                    <p class="text-sm text-gray-500">— Rafi, Karyawan</p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-lg transition transform hover:scale-105"
+                    data-aos="flip-left" data-aos-delay="200">
+                    <p class="text-gray-700 mb-4 italic">"Langganan banget cireng isi-nya, pedesnya pas!"</p>
+                    <div class="text-yellow-400 text-xl mb-2">★★★★★</div>
+                    <p class="text-sm text-gray-500">— Yuni, Ibu Rumah Tangga</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lokasi -->
+    <section id="lokasi" class="py-16 px-4 bg-white text-gray-800">
+        <div class="max-w-6xl mx-auto text-center mb-12">
+            <h2 class="text-3xl font-bold mb-4 text-orange-600">Lokasi Kami</h2>
+            <p class="text-gray-600">Kunjungi langsung kedai jajanan kami di lokasi berikut:</p>
+        </div>
+        <div class="max-w-4xl mx-auto">
+            <div class="w-full h-80 rounded-xl overflow-hidden shadow-xl">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3952.785447633162!2d110.36136487589754!3d-7.816035877926785!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a578cd9ad84f9%3A0x6c8c5c93a11e0f8a!2sTugu%20Yogyakarta!5e0!3m2!1sid!2sid!4v1656444879876!5m2!1sid!2sid"
+                    width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="bg-white text-center py-6 text-sm text-gray-500 border-t mt-auto">
+        © 2025 Kedai Firla. Dibuat dengan ❤️ dan cemilan.
+    </footer>
+
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true
+        });
+
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+
+</html>

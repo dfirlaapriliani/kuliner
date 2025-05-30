@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Detail Pisang Coklat | Kedai Firla</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            font-family: 'Inter', sans-serif;
+            background-color: #FFFBF4;
+        }
+
+        footer {
+            margin-top: auto;
+        }
+
+        .product-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-primary {
+            background-color: #FF6F00;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 50px;
+            transition: background-color 0.3s ease;
+            font-size: 1.1rem;
+            box-shadow: 0px 4px 10px rgba(255, 100, 0, 0.5);
+        }
+
+        .btn-primary:hover {
+            background-color: #FF4500;
+            box-shadow: 0px 4px 20px rgba(255, 69, 0, 0.7);
+        }
+
+        .btn-primary:active {
+            transform: scale(0.98);
+        }
+
+        .price {
+            font-size: 1.7rem;
+            font-weight: 700;
+            color: #FF6F00;
+        }
+
+        .feature-list {
+            color: #FF4500;
+        }
+
+        .feature-list li {
+            margin-bottom: 8px;
+        }
+
+        .rating {
+            display: flex;
+            align-items: center;
+        }
+
+        .rating i {
+            color: #FF6F00;
+            font-size: 1.2rem;
+        }
+
+        .rating span {
+            color: #4B4B4B;
+            margin-left: 8px;
+        }
+
+        .product-img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            object-fit: cover;
+        }
+
+        .best-seller-label {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            background-color: rgba(255, 100, 0, 0.9);
+            color: white;
+            padding: 8px 15px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            border-radius: 20px;
+        }
+
+        .testimonial-container {
+            display: flex;
+            gap: 20px;
+            padding: 20px 0;
+            overflow: hidden;
+            flex-wrap: wrap;
+        }
+
+        .testimonial {
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+
+        .testimonial p {
+            font-style: italic;
+            color: #555;
+        }
+
+        .testimonial span {
+            font-weight: bold;
+            color: #FF6F00;
+        }
+
+        .feature-section {
+            background-color: #fff;
+            padding: 25px;
+            margin-top: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .feature-section h3 {
+            color: #FF6F00;
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        .feature-item {
+            text-align: center;
+        }
+
+        .feature-item i {
+            font-size: 3rem;
+            color: #FF6F00;
+        }
+
+        .feature-item h4 {
+            font-weight: 600;
+            margin-top: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .product-card {
+                padding: 15px;
+            }
+
+            .product-desc {
+                font-size: 1rem;
+            }
+
+            .price {
+                font-size: 1.2rem;
+            }
+
+            .testimonial-container {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-orange-50 text-gray-800">
+
+    <!-- Header -->
+    <header class="bg-white/80 backdrop-blur-md shadow-md sticky top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center py-4 px-6">
+            <h1 class="text-2xl font-extrabold text-orange-600 tracking-wider">Kedai Firla</h1>
+            <button id="menu-toggle" class="md:hidden text-orange-600 focus:outline-none text-2xl">&#9776;</button>
+            <nav id="menu" class="hidden md:flex space-x-6 text-sm font-medium">
+                <a href="index.html" class="hover:text-orange-600">Beranda</a>
+                <a href="semua.html" class="hover:text-orange-600">Daftar Makanan</a>
+                <a href="pesan.html" class="hover:text-orange-600">Order</a>
+                <a href="contact.html" class="hover:text-orange-600">FAQs</a>
+            </nav>
+        </div>
+        <div id="mobile-menu" class="md:hidden hidden px-6 pb-4 flex flex-col space-y-2">
+            <a href="index.html" class="hover:text-orange-600">Beranda</a>
+            <a href="semua.html" class="hover:text-orange-600">Daftar Makanan</a>
+            <a href="pesan.html" class="hover:text-orange-600">Order</a>
+            <a href="contact.html" class="hover:text-orange-600">FAQs</a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-grow container mx-auto px-6 py-12">
+        <div class="grid md:grid-cols-2 gap-10 items-start">
+            <!-- Product Image Section -->
+            <div class="relative">
+                <img src="pisangg.jpg" alt="Pisang Coklat" class="product-img" />
+                <div class="best-seller-label">Best Seller</div>
+            </div>
+
+            <!-- Product Info Card -->
+            <div class="product-card bg-white p-6 rounded-xl shadow-lg space-y-6">
+                <h2 class="text-4xl font-bold text-orange-700">Pisang Coklat</h2>
+
+                <div class="price">Rp 10.000,-</div>
+
+                <!-- Rating -->
+                <div class="rating flex items-center space-x-1">
+                    <i class="fa-solid fa-star-half-stroke text-orange-500"></i>
+                    <span class="ml-2 text-sm text-gray-600">(4.8/5)</span>
+                </div>
+
+                <!-- Features -->
+                <ul class="feature-list text-sm text-gray-700 space-y-2">
+                    <li><i class="fa-solid fa-check text-green-500 mr-2"></i>Isi coklat leleh yang menggoda</li>
+                    <li><i class="fa-solid fa-check text-green-500 mr-2"></i>Rasa pisang manis dengan tekstur lembut
+                    </li>
+                    <li><i class="fa-solid fa-check text-green-500 mr-2"></i>Paduan yang pas antara pisang dan coklat
+                    </li>
+                    <li><i class="fa-solid fa-check text-green-500 mr-2"></i>Cocok untuk camilan atau dessert</li>
+                    <li><i class="fa-solid fa-check text-green-500 mr-2"></i>Tanpa pengawet, alami dan segar</li>
+                </ul>
+
+                <!-- WhatsApp Order Button -->
+                <a href="https://wa.me/62895404171275?text=Hai%20Kak%2C%20saya%20mau%20pesan%20Pisang%20Coklat%20dong%20%F0%9F%8D%A1"
+                    class="inline-block btn-primary text-center w-full">
+                    📲 Pesan via WhatsApp
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Feature Section -->
+    <section class="feature-section">
+        <h3 class="text-2xl font-bold text-orange-600 mb-6 text-center">Keunggulan Pisang Coklat</h3>
+        <div class="grid md:grid-cols-3 gap-6 mt-4">
+            <div class="feature-item p-4 rounded-lg shadow-md bg-orange-50 hover:shadow-lg transition">
+                <i class="fa-solid fa-banana text-4xl text-orange-500 mb-3"></i>
+                <h4 class="text-lg font-semibold mb-2">Rasa Manis Pisang</h4>
+                <p class="text-sm text-gray-600">Nikmati rasa pisang manis yang segar di dalam setiap gigitan.</p>
+            </div>
+            <div class="feature-item p-4 rounded-lg shadow-md bg-orange-50 hover:shadow-lg transition">
+                <i class="fa-solid fa-candy text-4xl text-orange-500 mb-3"></i>
+                <h4 class="text-lg font-semibold mb-2">Coklat Leleh</h4>
+                <p class="text-sm text-gray-600">Coklat leleh yang akan memanjakan lidah Anda dengan kenikmatannya.</p>
+            </div>
+            <div class="feature-item p-4 rounded-lg shadow-md bg-orange-50 hover:shadow-lg transition">
+                <i class="fa-solid fa-heart text-4xl text-orange-500 mb-3"></i>
+                <h4 class="text-lg font-semibold mb-2">Camilan Sehat</h4>
+                <p class="text-sm text-gray-600">Tanpa pengawet, dibuat dengan bahan alami dan segar.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonial Section -->
+    <section class="mt-12">
+        <h3 class="text-2xl font-semibold text-orange-600 text-center mb-6">Apa Kata Pelanggan?</h3>
+        <div class="testimonial-container">
+            <div class="testimonial">
+                <p>"Pisang coklatnya enak banget! Coklatnya meleleh pas digigit, pisangnya manis!"</p>
+                <span>- Diana, Jakarta</span>
+            </div>
+            <div class="testimonial">
+                <p>"Suka banget dengan pisang coklat ini, perpaduan rasa pisang dan coklatnya luar biasa."</p><span>-
+                    Andi, Bandung</span>
+            </div>
+            <div class="testimonial">
+                <p>"Pisang coklatnya pas banget buat camilan sore hari. Rasa manisnya pas!"</p><span>- Sari,
+                    Bogor</span>
+            </div>
+        </div>
+    </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white text-center py-6 text-sm text-gray-500 border-t">
+        © 2025 Kedai Firla. Dibuat dengan ❤️ dan cemilan.
+    </footer>
+
+    <script>
+        document.getElementById('menu-toggle').addEventListener('click', function () {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+
+</html>

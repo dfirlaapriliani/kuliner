@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Semua Produk - Kedai Firla</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet" />
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .glow:hover {
+            box-shadow: 0 0 20px rgba(255, 136, 0, 0.4);
+            transform: translateY(-6px);
+            transition: all 0.4s ease-in-out;
+        }
+    </style>
+</head>
+
+<body class="bg-gradient-to-b from-orange-50 via-yellow-50 to-white text-gray-800">
+
+    <!-- Header -->
+    <header class="bg-white/80 backdrop-blur-md shadow-md sticky top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center py-4 px-6">
+            <h1 class="text-2xl font-extrabold text-orange-600 tracking-wider">Kedai Firla</h1>
+            <button id="menu-toggle" class="md:hidden text-orange-600 focus:outline-none text-2xl">&#9776;</button>
+            <nav id="menu" class="hidden md:flex space-x-6 text-sm font-medium">
+                <a href="index.html" class="hover:text-orange-600">Beranda</a>
+                <a href="semua.html" class="hover:text-orange-600">Daftar Makanan</a>
+                <a href="pesan.html" class="hover:text-orange-600">Order</a>
+                <a href="contact.html" class="hover:text-orange-600">FAQs</a>
+            </nav>
+        </div>
+        <div id="mobile-menu" class="md:hidden hidden px-6 pb-4">
+            <a href="index.html" class="block py-2 hover:text-orange-600">Beranda</a>
+            <a href="semua.html" class="block py-2 hover:text-orange-600">Daftar Makanan</a>
+            <a href="pesan.html" class="block py-2 hover:text-orange-600">Order</a>
+            <a href="contact.html" class="block py-2 hover:text-orange-600">FAQs</a>
+        </div>
+    </header>
+
+    <!-- Semua Produk -->
+    <main class="max-w-6xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-orange-700 text-center mb-12">Semua Produk Jajanan</h2>
+        <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+            <!-- Template Produk -->
+            <!-- Salin dan sesuaikan untuk tiap produk -->
+            <!-- PRODUK 1-12 -->
+            <!-- Struktur produk yang diulang -->
+            <!-- Setiap produk pakai class sr-card agar bisa di-scroll reveal -->
+            <!-- Berikut daftar produk -->
+            <!-- 1 -->
+            <div class="sr-card bg-white rounded-2xl overflow-hidden shadow-md glow">
+                <img src="risol.jpg" alt="Risol Mayo" class="w-full h-48 object-cover" />
+                <div class="p-5 space-y-2">
+                    <h4 class="font-bold text-lg text-orange-600">Risol Mayo</h4>
+                    <p class="text-gray-600 text-sm">Gurih, lembut, creamy di setiap gigitan.</p>
+                    <p class="text-sm text-gray-800 font-semibold">Rp 5.000</p>
+                    <a href="detail-risol.html"
+                        class="block w-full bg-orange-500 text-white text-sm font-semibold text-center px-4 py-2 rounded-full hover:bg-orange-600 transition">Lihat
+                        Detail</a>
+                </div>
+            </div>
+
+            <!-- 2 -->
+            <div class="sr-card bg-white rounded-2xl overflow-hidden shadow-md glow">
+                <img src="otak.jpeg" alt="Otak-Otak" class="w-full h-48 object-cover" />
+                <div class="p-5 space-y-2">
+                    <h4 class="font-bold text-lg text-orange-600">Otak-Otak</h4>
+                    <p class="text-gray-600 text-sm">Cocok buat camilan sore.</p>
+                    <p class="text-sm text-gray-800 font-semibold">Rp 4.000</p>
+                    <a href="detail-otak.html"
+                        class="block w-full bg-orange-500 text-white text-sm font-semibold text-center px-4 py-2 rounded-full hover:bg-orange-600 transition">Lihat
+                        Detail</a>
+                </div>
+            </div>
+
+            <!-- 3 -->
+            <div class="sr-card bg-white rounded-2xl overflow-hidden shadow-md glow">
+                <img src="donat.jpeg" alt="Donat Mini" class="w-full h-48 object-cover" />
+                <div class="p-5 space-y-2">
+                    <h4 class="font-bold text-lg text-orange-600">Donat Mini</h4>
+                    <p class="text-gray-600 text-sm">Manis, empuk, dan lucu.</p>
+                    <p class="text-sm text-gray-800 font-semibold">Rp 3.500</p>
+                    <a href="detail-donat.html"
+                        class="block w-full bg-orange-500 text-white text-sm font-semibold text-center px-4 py-2 rounded-full hover:bg-orange-600 transition">Lihat
+                        Detail</a>
+                </div>
+            </div>
+
+            <!-- 4 -->
+            <div class="sr-card bg-white rounded-2xl overflow-hidden shadow-md glow">
+                <img src="pastel.jpg" alt="Pastel Isi" class="w-full h-48 object-cover" />
+                <div class="p-5 space-y-2">
+                    <h4 class="font-bold text-lg text-orange-600">Pastel Isi</h4>
+                    <p class="text-gray-600 text-sm">Isi padat, renyah di luar.</p>
+                    <p class="text-sm text-gray-800 font-semibold">Rp 4.000</p>
+                    <a href="detail-pastel.html"
+                        class="block w-full bg-orange-500 text-white text-sm font-semibold text-center px-4 py-2 rounded-full hover:bg-orange-600 transition">Lihat
+                        Detail</a>
+                </div>
+            </div>
+
+            <!-- 5 -->
+            <div class="sr-card bg-white rounded-2xl overflow-hidden shadow-md glow">
+                <img src="cireng.jpg" alt="Cireng Isi" class="w-full h-48 object-cover" />
+                <div class="p-5 space-y-2">
+                    <h4 class="font-bold text-lg text-orange-600">Cireng Isi</h4>
+                    <p class="text-gray-600 text-sm">Kriuk di luar, kenyal di dalam.</p>
+                    <p class="text-sm text-gray-800 font-semibold">Rp 3.000</p>
+                    <a href="detail-cireng.html"
+                        class="block w-full bg-orange-500 text-white text-sm font-semibold text-center px-4 py-2 rounded-full hover:bg-orange-600 transition">Lihat
+                        Detail</a>
+                </div>
+            </div>
+
+            <!-- 6 -->
+            <div class="sr-card bg-white rounded-2xl overflow-hidden shadow-md glow">
+                <img src="pisangg.jpg" alt="Pisang Coklat" class="w-full h-48 object-cover" />
+                <div class="p-5 space-y-2">
+                    <h4 class="font-bold text-lg text-orange-600">Pisang Coklat</h4>
+                    <p class="text-gray-600 text-sm">Manis legit diselimuti coklat.</p>
+                    <p class="text-sm text-gray-800 font-semibold">Rp 4.500</p>
+                    <a href="detail-pisang.html"
+                        class="block w-full bg-orange-500 text-white text-sm font-semibold text-center px-4 py-2 rounded-full hover:bg-orange-600 transition">Lihat
+                        Detail</a>
+                </div>
+            </div>
+
+            <!-- 7 -->
+            <div class="sr-card bg-white rounded-2xl overflow-hidden shadow-md glow">
+                <img src="tahu.jpeg" alt="Tahu Crispy" class="w-full h-48 object-cover" />
+                <div class="p-5 space-y-2">
+                    <h4 class="font-bold text-lg text-orange-600">Tahu Crispy</h4>
+                    <p class="text-gray-600 text-sm">Renyes banget, bikin nagih.</p>
+                    <p class="text-sm text-gray-800 font-semibold">Rp 3.500</p>
+                    <a href="detail-tahu.html"
+                        class="block w-full bg-orange-500 text-white text-sm font-semibold text-center px-4 py-2 rounded-full hover:bg-orange-600 transition">Lihat
+                        Detail</a>
+                </div>
+            </div>
+
+            <!-- 8 -->
+            <div class="sr-card bg-white rounded-2xl overflow-hidden shadow-md glow">
+                <img src="kroket.jpeg" alt="Kroket Kentang" class="w-full h-48 object-cover" />
+                <div class="p-5 space-y-2">
+                    <h4 class="font-bold text-lg text-orange-600">Kroket Kentang</h4>
+                    <p class="text-gray-600 text-sm">Isi daging, gurih lembut di mulut.</p>
+                    <p class="text-sm text-gray-800 font-semibold">Rp 4.000</p>
+                    <a href="detail-kroket.html"
+                        class="block w-full bg-orange-500 text-white text-sm font-semibold text-center px-4 py-2 rounded-full hover:bg-orange-600 transition">Lihat
+                        Detail</a>
+                </div>
+            </div>
+
+            <!-- 9 -->
+            <div class="sr-card bg-white rounded-2xl overflow-hidden shadow-md glow">
+                <img src="lumpia.jpeg" alt="Lumpia Sayur" class="w-full h-48 object-cover" />
+                <div class="p-5 space-y-2">
+                    <h4 class="font-bold text-lg text-orange-600">Lumpia Sayur</h4>
+                    <p class="text-gray-600 text-sm">Segar dan cocok untuk vegetarian.</p>
+                    <p class="text-sm text-gray-800 font-semibold">Rp 4.000</p>
+                    <a href="detail-lumpia.html"
+                        class="block w-full bg-orange-500 text-white text-sm font-semibold text-center px-4 py-2 rounded-full hover:bg-orange-600 transition">Lihat
+                        Detail</a>
+                </div>
+            </div>
+
+            <!-- 10 -->
+            <div class="sr-card bg-white rounded-2xl overflow-hidden shadow-md glow">
+                <img src="sus.jpg" alt="Kue Sus" class="w-full h-48 object-cover" />
+                <div class="p-5 space-y-2">
+                    <h4 class="font-bold text-lg text-orange-600">Kue Sus</h4>
+                    <p class="text-gray-600 text-sm">Lembut dengan isian vla manis.</p>
+                    <p class="text-sm text-gray-800 font-semibold">Rp 3.500</p>
+                    <a href="detail-sus.html"
+                        class="block w-full bg-orange-500 text-white text-sm font-semibold text-center px-4 py-2 rounded-full hover:bg-orange-600 transition">Lihat
+                        Detail</a>
+                </div>
+            </div>
+
+            <!-- 11 -->
+            <div class="sr-card bg-white rounded-2xl overflow-hidden shadow-md glow">
+                <img src="sosis.jpeg" alt="Sosis Solo" class="w-full h-48 object-cover" />
+                <div class="p-5 space-y-2">
+                    <h4 class="font-bold text-lg text-orange-600">Sosis Solo</h4>
+                    <p class="text-gray-600 text-sm">Isi daging ayam dan rempah khas.</p>
+                    <p class="text-sm text-gray-800 font-semibold">Rp 4.000</p>
+                    <a href="detail-sosis.html"
+                        class="block w-full bg-orange-500 text-white text-sm font-semibold text-center px-4 py-2 rounded-full hover:bg-orange-600 transition">Lihat
+                        Detail</a>
+                </div>
+            </div>
+
+            <!-- 12 -->
+            <div class="sr-card bg-white rounded-2xl overflow-hidden shadow-md glow">
+                <img src="martabak.jpg" alt="Martabak Mini" class="w-full h-48 object-cover" />
+                <div class="p-5 space-y-2">
+                    <h4 class="font-bold text-lg text-orange-600">Martabak Mini</h4>
+                    <p class="text-gray-600 text-sm">Coklat, keju, dan kacang dalam satu gigitan.</p>
+                    <p class="text-sm text-gray-800 font-semibold">Rp 4.500</p>
+                    <a href="detail-martabak.html"
+                        class="block w-full bg-orange-500 text-white text-sm font-semibold text-center px-4 py-2 rounded-full hover:bg-orange-600 transition">Lihat
+                        Detail</a>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white text-center py-6 text-sm text-gray-500 border-t mt-10">
+        © 2025 Kedai Firla. Dibuat dengan ❤️ dan cemilan.
+    </footer>
+
+    <!-- ScrollReveal Init -->
+    <script>
+        ScrollReveal().reveal('.sr-card', {
+            delay: 100,
+            duration: 800,
+            distance: '40px',
+            origin: 'bottom',
+            interval: 100,
+            easing: 'ease-out',
+            reset: false
+        });
+
+        document.getElementById("menu-toggle").addEventListener("click", function () {
+            const mobileMenu = document.getElementById("mobile-menu");
+            mobileMenu.classList.toggle("hidden");
+        });
+    </script>
+</body>
+
+</html>
