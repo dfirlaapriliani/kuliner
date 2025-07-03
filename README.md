@@ -1,37 +1,35 @@
-# 🍽️ Kuliner by Firla – Personal Culinary Web
+# 🍽️ Kuliner by Firla – Digital Food Gallery & Recipe Showcase
 
-**Kuliner by Firla** is a beautifully designed, responsive static website dedicated to sharing personal culinary content – from food recommendations to simple recipes and food photography. Built with **HTML, CSS, and JavaScript**, this site is perfect for anyone who wants to showcase their passion for food in a clean, modern, and mobile-friendly format.
-
----
-
-## 🌐 Live Preview
-
-🔗 [kulinerbyfirla.netlify.app](https://kulinerbyfirla.netlify.app/)
+**Kuliner by Firla** adalah website kuliner pribadi yang menampilkan berbagai makanan ringan khas Indonesia dalam bentuk katalog digital.  
+Setiap menu memiliki **halaman detail sendiri**, lengkap dengan nama makanan, foto, dan deskripsi menarik. Desain responsif dibuat menggunakan **Tailwind CSS** dan **JavaScript**, semua terbundling dalam satu file — tanpa backend maupun database!
 
 ---
 
-## ✨ Features
-
-- 📸 Stunning layout with full-width hero and gallery sections  
-- 🍜 Food content sections: recipes, menus, or recommendations  
-- 🧾 No backend – pure static site (HTML, CSS, JavaScript)  
-- 📱 100% responsive – works on phones, tablets, and desktops  
-- 🎨 Aesthetic design and intuitive navigation  
-- 🚀 Fast-loading and lightweight  
+## 🌐 Live Demo  
+🔗 [https://kulinerbyfirla.netlify.app](https://kulinerbyfirla.netlify.app)
 
 ---
 
-## 📂 File Structure
+## ✨ Fitur Unggulan
+
+- 🧾 **Halaman Detail** makanan (contoh: `detail-cireng.html`, `detail-donat.html`, dll)
+- 📦 **Halaman Semua Menu (`semua.html`)** untuk melihat semua makanan sekaligus
+- 🛒 **Halaman Pemesanan (`pesan.html`)** sederhana yang bisa dikembangkan jadi form nyata
+- 💬 **Halaman Kontak (`contact.html`)**  
+- ⚡ **Desain ringan & cepat**, semua file CSS/JS sudah digabung dan dioptimalkan
+- 📱 100% **responsive**, enak dilihat di HP maupun laptop
+
+---
+
+## 🗂 Struktur File
 
 ```bash
-kulinerbyfirla/
-├── index.html              # Main homepage
-├── about.html              # (Optional) About or detail page
-├── css/
-│   └── style.css           # Main stylesheet
-├── js/
-│   └── script.js           # Basic interactivity
+kuliner/
+├── index.html              # Halaman utama
+├── semua.html              # Menampilkan semua daftar makanan
+├── pesan.html              # Simulasi halaman pemesanan
+├── contact.html            # Kontak pribadi
+├── detail-*.html           # Halaman detail per makanan
 ├── assets/
-│   ├── images/             # Food photos & icons
-│   └── fonts/              # (If used)
+│   └── images/             # Gambar makanan
 └── README.md
